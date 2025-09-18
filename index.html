@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thais I. Parron Ruiz | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --accent: #4f46e5; --bg: #f4f6f8; --card-shadow: rgba(0,0,0,0.08); }
+    html,body { height:100%; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin:0;
+      background:var(--bg);
+      color:#333;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Header */
+    header {
+      background:#1f2937;
+      color:#fff;
+      text-align:center;
+      padding:72px 20px 48px;
+    }
+    header h1 { font-size:2.6rem; margin:0; font-weight:700; }
+    header .subtitle { font-size:1.05rem; margin:12px 0; }
+    header .resume-link { margin-top:8px; }
+    header .resume-link a {
+      color:#fff;
+      font-weight:600;
+      text-decoration:underline;
+    }
+
+    /* About */
+    .about {
+      max-width:920px;
+      margin:36px auto;
+      padding:0 32px;
+      text-align:justify;
+    }
+    .about p { color:#555; line-height:1.7; margin:0 0 16px 0; font-size:1.05rem; }
+
+    /* Projects */
+    .projects {
+      max-width:1400px;
+      margin:24px auto 48px;
+      padding:24px 40px 64px;
+    }
+    .projects-intro {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:80px;
+      margin-bottom:28px;
+    }
+    .projects-intro p {
+      margin:0;
+      text-align:center;
+      font-style:italic;
+      color:#555;
+      max-width:820px;
+    }
+
+    /* Grid: 3 per row on large screens, responsive */
+    .projects-grid {
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:40px;
+      justify-items:center;
+    }
+    @media (max-width:1200px) { .projects-grid { grid-template-columns:repeat(2, 1fr); } }
+    @media (max-width:800px) { .projects-grid { grid-template-columns:1fr; } }
+
+    /* Card */
+    .project-card {
+      width:100%;
+      max-width:420px;
+      background:#fff;
+      border-radius:12px;
+      padding:28px 24px;
+      box-shadow:0 6px 15px var(--card-shadow);
+      transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+      cursor:pointer;
+      display:flex;
+      flex-direction:column;
+      text-align:left;
+      box-sizing:border-box;
+    }
+    .project-card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 12px 25px rgba(0,0,0,0.15);
+      background:#eef1ff;
+    }
+
+    /* Title centered, bullets justified */
+    .project-card a.title {
+      display:block;
+      text-decoration:none;
+      color:#1f2937;
+      font-weight:700;
+      font-size:1.06rem;
+      margin-bottom:10px;
+      text-align:center;
+    }
+
+    .project-card ul {
+      margin:0;
+      padding-left:20px;
+      list-style-position:inside;
+      text-align:justify;
+      color:#555;
+    }
+    .project-card li {
+      margin:6px 0;
+      font-weight:400;
+      font-size:0.95rem;
+      line-height:1.5;
+    }
+    .project-card li::marker { color:var(--accent); font-size:1.05em; }
+
+    /* Footer */
+    footer {
+      background:#1f2937;
+      color:#fff;
+      text-align:center;
+      padding:28px 20px;
+    }
+    footer p { margin:6px 0; font-size:0.95rem; }
+
+    /* Accessibility focus */
+    a:focus, button:focus, .project-card:focus { outline:3px solid rgba(79,70,229,0.18); outline-offset:3px; }
+
+    /* small screen tweaks */
+    @media (max-width:600px) {
+      header h1 { font-size:2.1rem; }
+      .about p { font-size:1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Thais I. Parron Ruiz</h1>
+    <div class="subtitle">Mechanical Engineering student at the University of South Florida</div>
+    <div class="resume-link"><a id="resume-link" href="Thais_Parron_Resume.pdf" target="_blank" rel="noopener">View Resume</a></div>
+  </header>
+
+  <main>
+    <section class="about" aria-label="About">
+      <p>Hello! I am <strong>Thais I. Parron Ruiz</strong>, a mechanical engineering student with hands-on experience in CAD design, MATLAB simulations, prototyping, and practical problem-solving. Projects include mechanical linkages, simulation-based designs, robotics, and sustainable engineering. Work focuses on functional design, analysis, and real-world impact.</p>
+
+      <p>This portfolio highlights select projects with short summaries and links to full reports. Use the project cards below to open each report directly.</p>
+    </section>
+
+    <section class="projects" aria-label="Projects">
+      <div class="projects-intro">
+        <p>Click any project card or title to open the full report in a new tab</p>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card" tabindex="0" role="button">
+          <a class="title" href="can-crusher-report.pdf" target="_blank" rel="noopener">Dual-Action Can Crusher Design</a>
+          <ul>
+            <li>Designed a dual-action can crusher using a 6-bar linkage in SolidWorks</li>
+            <li>Reduced input force by 40% through horizontal pre-denting before vertical crushing</li>
+            <li>Built functional prototype in aluminum and wood, resolved interference with spacers, and recommended steel for stiffness</li>
+          </ul>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button">
+          <a class="title" href="computationsMethods-report.pdf" target="_blank" rel="noopener">Numerical Methods with MATLAB</a>
+          <ul>
+            <li>Applied MATLAB methods such as bisection, regression, finite differences, and trapezoidal integration</li>
+            <li>Verified code accuracy with plots and error analysis</li>
+            <li>Modeled velocity and shear stress, performed heat transfer matrix solutions, and built interpolants and splines</li>
+            <li>Calculated trapezoid count for less than 0.001% true error</li>
+          </ul>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button">
+          <a class="title" href="Projectile-Simulation-report.pdf" target="_blank" rel="noopener">Projectile Simulation Game</a>
+          <ul>
+            <li>Developed a projectile-launching game in MATLAB to hit a target at a mountain base within two meters</li>
+            <li>Included physics-based trajectory and launch dynamics</li>
+            <li>Dynamic visuals show mountain, target, and projectile trajectory with multiple attempts</li>
+          </ul>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button">
+          <a class="title" href="Guitar-report.pdf" target="_blank" rel="noopener">SOLIDWORKS Engineering Project</a>
+          <ul>
+            <li>Designed an acoustic guitar in SolidWorks with accurate modeling of components</li>
+            <li>Created functional tuning pins to allow realistic string tension adjustment</li>
+          </ul>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button">
+          <a class="title" href="Action-Figure-bot-report.pdf" target="_blank" rel="noopener">Action Figure Bot</a>
+          <ul>
+            <li>Team project to design an object-follower robot with a 3D-printed chassis for K–12 outreach</li>
+            <li>Prototype used a single ultrasonic sensor and Arduino programming</li>
+          </ul>
+        </article>
+
+        <article class="project-card" tabindex="0" role="button">
+          <a class="title" href="sustainable-report.pdf" target="_blank" rel="noopener">Sustainable Engineering Project</a>
+          <ul>
+            <li>Collaborated on an engineering plan to protect the Hillsborough River</li>
+            <li>Included dams, reservoirs, and aquifer replenishment concepts</li>
+            <li>Focused on community well-being and wildlife preservation</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Email: thaisisabelle.parron@gmail.com</p>
+    <p>Phone: (656) 215-5187</p>
+    <p>Address: 14202 N 42nd Street, Tampa FL 33613</p>
+  </footer>
+
+  <script>
+    // Open card link on click and on keyboard activation
+    document.querySelectorAll('.project-card').forEach(function(card) {
+      const link = card.querySelector('a.title');
+      card.addEventListener('click', function(e) {
+        if (!link) return;
+        window.open(link.href, '_blank', 'noopener');
+      });
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (link) window.open(link.href, '_blank', 'noopener');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
