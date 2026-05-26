@@ -81,20 +81,20 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             justify-items: center;
         }
 
         @media (max-width: 1200px) {
             .projects-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 per row */
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 800px) {
             .projects-grid {
-                grid-template-columns: 1fr; /* 1 per row */
+                grid-template-columns: 1fr;
             }
         }
 
@@ -103,7 +103,7 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-            text-align: left; /* bullets justified, title centered separately */
+            text-align: left;
             padding: 30px 25px;
             font-weight: 600;
             font-size: 1rem;
@@ -124,7 +124,7 @@
             display: block;
             margin-bottom: 10px;
             transition: color 0.2s ease;
-            text-align: center; /* title centered */
+            text-align: center;
         }
 
         .project-card a:hover {
@@ -136,7 +136,7 @@
             margin: 0;
             list-style-type: disc;
             list-style-position: inside;
-            text-align: justify; /* bullets justified */
+            text-align: justify;
         }
 
         .project-card ul li {
@@ -149,6 +149,51 @@
         .project-card ul li::marker {
             color: #4f46e5;
             font-size: 1.1em;
+        }
+
+        /* Ongoing Section */
+        .ongoing {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .ongoing h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1f2937;
+        }
+
+        .ongoing-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .ongoing-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+        }
+
+        .ongoing-card h3 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 12px;
+        }
+
+        .ongoing-card ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: disc;
+            list-style-position: inside;
+            text-align: justify;
+        }
+
+        .ongoing-card ul li {
+            color: #555;
+            margin: 6px 0;
         }
 
         /* Footer */
@@ -187,72 +232,81 @@
 </header>
 
 <section class="about">
-    <p>Hello! I am <strong>Thais I. Parron Ruiz</strong>, a dedicated and passionate Mechanical Engineering student with a strong academic background and hands-on experience in a variety of engineering disciplines. Over the course of my studies, I have gained extensive experience in CAD design, MATLAB simulations, prototyping, and practical problem-solving. I enjoy transforming ideas into functional and efficient designs, optimizing mechanisms for performance and reliability, and exploring innovative solutions to engineering challenges.</p>
+    <p>Hello! I am <strong>Thais I. Parron Ruiz</strong>, a dedicated and passionate Mechanical Engineering student with a strong academic background and hands-on experience in a variety of engineering disciplines. Over the course of my studies, I have gained extensive experience in CAD design, MATLAB simulations, prototyping, controls, research, and practical problem-solving. I enjoy transforming ideas into functional and efficient designs, optimizing mechanisms for performance and reliability, and exploring innovative solutions to engineering challenges.</p>
 
-    <p>My interests span across mechanical systems, sustainable engineering, and projects that make a tangible difference in the community and the environment. I have contributed to both academic projects and real-world applications, ranging from mechanical linkages and simulation-based designs to robotics and sustainable water collection systems. I take pride in combining analytical thinking with creativity to develop solutions that are not only technically sound but also practical and impactful.</p>
+    <p>My interests span across mechanical systems, sustainable engineering, materials research, automation, and projects that make a tangible difference in the community and the environment. I have contributed to both academic projects and real-world applications, ranging from mechanical linkages and simulation-based designs to robotics, PLC controls, vibration testing, and sustainable water collection systems. I take pride in combining analytical thinking with creativity to develop solutions that are not only technically sound but also practical and impactful.</p>
 
-    <p>This portfolio showcases a selection of my key projects, highlighting my skills in design, analysis, prototyping, and project management. Through these projects, I aim to demonstrate my ability to apply engineering principles effectively while maintaining attention to detail, innovation, and a focus on outcomes that benefit society.</p>
+    <p>This portfolio showcases a selection of my key projects, highlighting my skills in design, analysis, prototyping, programming, testing, and project documentation. Through these projects, I aim to demonstrate my ability to apply engineering principles effectively while maintaining attention to detail, innovation, and a focus on meaningful outcomes.</p>
 </section>
-
-
 
 <section class="projects">
     <div class="projects-intro">
-        <p>Click on any project card or title to open the full report in a new tab.</p>
+        <p>Click on any project card or title to open the full report, poster, or project summary in a new tab.</p>
     </div>
 
     <div class="projects-grid">
         <div class="project-card" onclick="window.open('Water-Harvesting-Research-Poster.pdf', '_blank')">
-            <a href="Water-Harvesting-Research-Poster.pdf" target="_blank">Water Harvesting Research</a>
+            <a href="Water-Harvesting-Research-Poster.pdf" target="_blank">PFAS-Free Fog Harvesting Research</a>
             <ul>
-                <li>Conducted research on atmospheric water harvesting using surface treatment and cooling methods to improve water collection.</li>
-                <li>Worked with laser-textured aluminum surfaces and OTS treatment to create hydrophilic and hydrophobic patterns for better condensation control.</li>
-                <li>Integrated Peltier cooling to increase condensation and support the development of a more efficient water collection system.</li>
-                <li>Presented the research through a poster focused on sustainable water solutions for areas with limited access to clean water.</li>
+                <li>Designed and tested a PFAS-free fog harvesting system using laser-textured aluminum surfaces with patterned superhydrophilic and superhydrophobic regions.</li>
+                <li>Evaluated untreated, superhydrophobic, and patterned samples under controlled fog conditions with and without Peltier cooling.</li>
+                <li>Achieved the highest water collection with the patterned surface and active cooling, reaching 6.884 mL.</li>
+                <li>Presented the research through a FURC poster focused on sustainable water collection and surface engineering.</li>
+            </ul>
+        </div>
+
+        <div class="project-card" onclick="window.open('PLC_Ladder_Logic_Control_Systems.pdf', '_blank')">
+            <a href="PLC_Ladder_Logic_Control_Systems.pdf" target="_blank">PLC Ladder Logic Control Systems</a>
+            <ul>
+                <li>Developed and tested LogixPro ladder logic programs for door control, two-way traffic control, and conveyor/silo automation.</li>
+                <li>Programmed motor control, timed traffic light cycles, proximity-based box counting, reset logic, interlocks, and status indicator lights.</li>
+                <li>Applied PLC concepts including relays, timers, counters, sensors, switches, output coils, and input/output logic.</li>
+                <li>Verified each program using the built-in LogixPro simulators to confirm correct system response to operating conditions.</li>
             </ul>
         </div>
 
         <div class="project-card" onclick="window.open('can-crusher-report.pdf', '_blank')">
             <a href="can-crusher-report.pdf" target="_blank">Dual-Action Can Crusher Design</a>
             <ul>
-                <li>Designed a dual-action can crusher using a 6-bar linkage in SolidWorks.</li>
-                <li>Reduced required input force by 40% through horizontal pre-denting before vertical crushing.</li>
-                <li>Built a functional prototype using aluminum and wood, resolved interference issues with spacers, and recommended steel for improved stiffness.</li>
+                <li>Designed a dual-action can crusher in SolidWorks using a 6-bar linkage mechanism to pre-dent cans horizontally before completing vertical crushing.</li>
+                <li>Reduced required input force by approximately 40%, from 36 to 21 pounds, through prototype testing with mechanical and electrical force gauges.</li>
+                <li>Built a functional prototype using aluminum and wood, resolved mechanical interference with spacers, and recommended steel for improved stiffness.</li>
             </ul>
         </div>
 
         <div class="project-card" onclick="window.open('computationsMethods-report.pdf', '_blank')">
-            <a href="computationsMethods-report.pdf" target="_blank">Numerical Methods with MATLAB</a>
+            <a href="computationsMethods-report.pdf" target="_blank">Computational Methods with MATLAB</a>
             <ul>
-                <li>Applied MATLAB to solve engineering problems using bisection, regression, finite differences, and trapezoidal integration.</li>
-                <li>Verified code accuracy with plots and error analysis.</li>
-                <li>Modeled velocity and shear stress in fluid flow, performed heat transfer matrix solutions, built interpolants and splines.</li>
-                <li>Calculated the number of trapezoids required to achieve less than 0.001% true error in integral approximation.</li>
+                <li>Applied MATLAB to solve engineering problems in fluid mechanics and heat transfer using numerical methods, matrix systems, finite differences, regression, interpolation, and spline fitting.</li>
+                <li>Compared theoretical and numerical results using plots, relative error analysis, and engineering assumptions such as laminar flow, round-off error, and heat conduction behavior.</li>
+                <li>Modeled velocity and shear stress in fluid flow and performed heat transfer matrix solutions for engineering analysis.</li>
             </ul>
         </div>
 
         <div class="project-card" onclick="window.open('Projectile-Simulation-report.pdf', '_blank')">
-            <a href="Projectile-Simulation-report.pdf" target="_blank">Projectile Simulation Game</a>
+            <a href="Projectile-Simulation-report.pdf" target="_blank">Projectile Motion Simulation Game</a>
             <ul>
-                <li>Developed a projectile-launching game in MATLAB where players aimed to hit a target at the base of a mountain with precision within two meters.</li>
-                <li>Incorporated physics-based trajectory and launch dynamics.</li>
-                <li>Displayed dynamic visuals of the mountain, target, and projectile trajectory, allowing multiple attempts.</li>
+                <li>Developed a MATLAB projectile motion simulator using user-defined launch height, target location, launch angle, velocity, and gravity conditions for Earth, Mars, and Jupiter.</li>
+                <li>Created dynamic trajectory visuals, input validation, multiple attempts, and feedback for maximum height and distance from the target.</li>
+                <li>Designed the program to evaluate whether the projectile landed within a 2-meter target accuracy requirement.</li>
             </ul>
         </div>
 
         <div class="project-card" onclick="window.open('Guitar-report.pdf', '_blank')">
-            <a href="Guitar-report.pdf" target="_blank">SOLIDWORKS Engineering Project</a>
+            <a href="Guitar-report.pdf" target="_blank">Acoustic Guitar CAD Model</a>
             <ul>
-                <li>Designed an acoustic guitar in SolidWorks, accurately modeling all components.</li>
-                <li>Created functional tuning pins that mimic real-life mechanics for string tension adjustment.</li>
+                <li>Modeled a full acoustic guitar assembly in SolidWorks from scratch, including detailed part drawings, material selection, exploded views, and manufacturing-style documentation.</li>
+                <li>Designed a functional tuning mechanism using shaft-mounted worms and worm gears to adjust string tension through rotational motion.</li>
+                <li>Strengthened CAD design skills through part modeling, assembly mates, mechanical detailing, and component documentation.</li>
             </ul>
         </div>
 
         <div class="project-card" onclick="window.open('Action-Figure-bot-report.pdf', '_blank')">
             <a href="Action-Figure-bot-report.pdf" target="_blank">Action Figure Bot</a>
             <ul>
-                <li>In a team of five, designed an object-follower robot with a 3D-printed chassis to introduce over 100 K–12 students to engineering and robotics.</li>
-                <li>Built a working prototype using a single ultrasonic sensor to follow an object, programmed in Arduino.</li>
+                <li>Collaborated with a team of five students to design and build a 3D-printed Among Us object-following robot for a K-8 STEM outreach application.</li>
+                <li>Programmed Arduino-based ultrasonic sensor logic to follow objects within 30 cm, stop at 5 cm, and search left or right when no object was detected.</li>
+                <li>Designed the prototype to be affordable, durable, safe for young users, and compact enough for classroom demonstrations.</li>
             </ul>
         </div>
 
@@ -260,32 +314,43 @@
             <a href="sustainable-report.pdf" target="_blank">Sustainable Engineering Project</a>
             <ul>
                 <li>Collaborated on a sustainable engineering project for Hillsborough County to protect the Hillsborough River.</li>
-                <li>Implemented dams, reservoirs, and aquifer replenishment.</li>
-                <li>Focused on community well-being and wildlife preservation.</li>
+                <li>Developed a concept involving dams, reservoirs, and aquifer replenishment to support water management and environmental protection.</li>
+                <li>Focused on community well-being, wildlife preservation, and sustainable infrastructure planning.</li>
             </ul>
         </div>
     </div>
 </section>
 
 <!-- Ongoing Projects & Experience -->
-<section class="ongoing" style="padding:60px 40px; max-width:1200px; margin:auto;">
-    <h2 style="text-align:center; margin-bottom: 30px; color:#1f2937;">Ongoing Projects & Experience</h2>
+<section class="ongoing">
+    <h2>Ongoing Projects & Experience</h2>
 
-    <div style="display:flex; flex-direction:column; gap:30px;">
+    <div class="ongoing-grid">
         <!-- Tutoring Experience -->
-        <div style="background-color:white; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.08); padding:25px;">
-            <h3 style="text-align:center; color:#000000; margin-bottom:12px;">Engineering Tutoring</h3>
-            <ul style="margin:0; padding-left:20px; list-style-type:disc; list-style-position:inside; text-align:justify;">
+        <div class="ongoing-card">
+            <h3>Engineering Tutoring</h3>
+            <ul>
                 <li>Tutor at the Engineering Student Success Center in Statics, Dynamics, Thermodynamics, Vibrations, Programming Concepts, Computational Methods, and Kinematics & Dynamics of Machinery.</li>
                 <li>Helping students understand complex engineering concepts and develop stronger problem-solving strategies.</li>
                 <li>Enhancing communication and mentorship skills while guiding students through technical coursework.</li>
             </ul>
         </div>
 
+        <!-- Vibration Research -->
+        <div class="ongoing-card">
+            <h3>Vibration-Based Corrosion Detection Research</h3>
+            <ul>
+                <li>Conducting vibration-based corrosion research on uncorroded and corroded 12-inch plates using impact hammer testing and two end-mounted accelerometers.</li>
+                <li>Comparing modal response, mode shapes, and nodal behavior to identify vibration changes associated with corrosion location.</li>
+                <li>Testing 51 impact locations spaced 0.25 inches apart along the plate, with centerline excitation used to reduce torsional modes during analysis.</li>
+                <li>Supporting experimental setup, data collection, and interpretation of vibration behavior for corrosion detection applications.</li>
+            </ul>
+        </div>
+
         <!-- Capstone Project -->
-        <div style="background-color:white; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.08); padding:25px;">
-            <h3 style="text-align:center; color:#000000; margin-bottom:12px;">Mechanical Secondary Safety System for Aircraft</h3>
-            <ul style="margin:0; padding-left:20px; list-style-type:disc; list-style-position:inside; text-align:justify;">
+        <div class="ongoing-card">
+            <h3>Mechanical Secondary Safety System for Aircraft</h3>
+            <ul>
                 <li>Developing a fully mechanical secondary control system for lightweight aircraft to support safer emergency landings.</li>
                 <li>Designed to provide backup aircraft control if power, engine function, or primary systems are lost during an emergency.</li>
                 <li>Creating a system that can adapt to different aircraft models, with the current prototype focused on a Cessna Skyhawk 172.</li>
@@ -301,7 +366,7 @@
     <!-- Certifications (PDF links) -->
     <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-bottom: 30px;">
         <div style="text-align:center;">
-            <a href="Certificate_Mechanical_Design.pdf" target="_blank" style="font-weight:600; color:#4f46e5; text-decoration:none;"> SOLIDWORKS Mechanical Design (2024)</a>
+            <a href="Certificate_Mechanical_Design.pdf" target="_blank" style="font-weight:600; color:#4f46e5; text-decoration:none;">SOLIDWORKS Mechanical Design (2024)</a>
         </div>
         <div style="text-align:center;">
             <a href="Certificate_additive_manufacturing.pdf" target="_blank" style="font-weight:600; color:#4f46e5; text-decoration:none;">SOLIDWORKS Additive Manufacturing (2024)</a>
@@ -310,13 +375,12 @@
 
     <!-- Dean's List -->
     <div style="text-align:center;">
-        <p style="font-weight:700; color:#1f2937; margin-bottom:8px;">Dean’s List – University of South Florida</p>
+        <p style="font-weight:700; color:#1f2937; margin-bottom:8px;">Dean’s List - University of South Florida</p>
         <p style="color:#555; margin:4px 0;">Fall 2022</p>
         <p style="color:#555; margin:4px 0;">Spring 2023</p>
         <p style="color:#555; margin:4px 0;">Spring 2025</p>
     </div>
 </section>
-
 
 <footer>
     <p>Email: thaisisabelle.parron@gmail.com</p>
